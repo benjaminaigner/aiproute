@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context="systems.byteswap.aiproute.EditRouteActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/address"
+        android:id="@+id/textViewAddress"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/netmask"
+        android:id="@+id/textViewNetmask"
+        style="@style/Base.TextAppearance.AppCompat.Title"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/netmask" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/gateway"
+        android:id="@+id/textViewGateway"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/gateway" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/metric"
+        android:id="@+id/textViewMetric"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/metric" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/persistent"
+        android:id="@+id/checkBoxPersistent" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/active"
+        android:id="@+id/checkBoxActive" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveRoute"
+        android:text="@string/button_save"
+        android:id="@+id/buttonSave"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

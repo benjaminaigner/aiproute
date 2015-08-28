@@ -1,0 +1,20 @@
+<resources>
+    <!-- main activity -->
+    <string name="app_name">AIProute</string>
+    <string name="button_add">Add new route</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- settings activity -->
+
+    <!-- new/edit route -->
+    <string name="address">Address</string>
+    <string name="gateway">Gateway</string>
+    <string name="netmask">Netmask</string>
+    <string name="metric">Metric</string>
+    <string name="persistent">Persistent (apply on reboot)</string>
+    <string name="active">Active</string>
+    <string name="button_save">Save</string>
+    <string name="title_activity_edit_route">Create / Edit activity</string>
+
+</resources>

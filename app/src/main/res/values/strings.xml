@@ -9,6 +9,7 @@
 
     <!-- new/edit route -->
     <string name="address">Address</string>
+    <string name="name">Name</string>
     <string name="gateway">Gateway</string>
     <string name="netmask">Netmask</string>
     <string name="metric">Metric</string>

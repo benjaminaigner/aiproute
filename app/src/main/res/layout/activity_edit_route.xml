@@ -1,10 +1,27 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:orientation="vertical"
     tools:context="systems.byteswap.aiproute.EditRouteActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/name"
+        android:id="@+id/textViewName"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEditName"
+        android:hint="@string/name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,6 +34,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/textEditAddress"
         android:hint="@string/address" />
 
     <TextView
@@ -30,6 +48,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/textEditNetmask"
         android:hint="@string/netmask" />
 
     <TextView
@@ -43,6 +62,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/textEditGateway"
         android:hint="@string/gateway" />
 
     <TextView
@@ -56,6 +76,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/textEditMetric"
         android:hint="@string/metric" />
 
     <CheckBox
@@ -79,3 +100,4 @@
         android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
+</ScrollView>

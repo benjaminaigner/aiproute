@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         dataAdapter.setViewBinder(binder);
 
         //load every already active route (in case of SSID based activation, check wifi state too)
-        if(values != null) {
+        if(values != null && values.getCount() > 0) {
             //Load Wifi facility
             WifiManager wifi = (WifiManager)this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 

@@ -76,7 +76,7 @@ public class StorageProvider extends SQLiteOpenHelper {
         Cursor cursor = db.query(ROUTE_TABLE_NAME, new String[]{KEY_ROWID,
                         KEY_ADDRESS, KEY_NETMASK, KEY_GATEWAY, KEY_NAME, KEY_METRIC, KEY_ACTIVE, KEY_PERSISTENT, KEY_INTERFACE},
                 KEY_ROWID + "='" + id + "'", null, null, null, null);
-        if (cursor != null) {
+        if (cursor != null && cursor.getCount() > 0) {
             cursor.moveToFirst();
 
             route.setId(cursor.getInt(cursor.getColumnIndex(KEY_ROWID)));
@@ -113,7 +113,7 @@ public class StorageProvider extends SQLiteOpenHelper {
         boolean iterate = true;
         int index = 0;
 
-        if (result != null) {
+        if (result != null && result.getCount() > 0) {
             result.moveToFirst();
 
             while (iterate) {

@@ -80,7 +80,7 @@ public class EditRouteActivity extends AppCompatActivity implements SelectSSIDDi
                     Cursor ssidcursor = storage.fetchSSID(index);
 
                     //load first row
-                    if(ssidcursor != null) {
+                    if(ssidcursor != null && ssidcursor.getCount() > 0) {
                         if(!ssidArray.contains(ssidcursor.getString(ssidcursor.getColumnIndex(StorageProvider.KEY2_SSID)))) {
                             ssidArray.add(ssidcursor.getString(ssidcursor.getColumnIndex(StorageProvider.KEY2_SSID)));
                             activeArray.add(true);

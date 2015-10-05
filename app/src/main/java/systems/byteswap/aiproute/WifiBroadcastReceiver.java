@@ -45,7 +45,7 @@ public class WifiBroadcastReceiver extends BroadcastReceiver {
                 if(ssidactivation) {
                     //if activated, look for routes with the new SSID and which are active
                     WifiInfo winfo = wifi.getConnectionInfo();
-                    String currentSSID = winfo.getSSID();
+                    String currentSSID = winfo.getSSID().replaceAll("\"", "");
                     routes = storage.fetchRouteForSSID(currentSSID);
                     Log.i("AIProute", "SSID activation, load all routes for: " + currentSSID + ", found: " + routes.getCount());
                 } else {

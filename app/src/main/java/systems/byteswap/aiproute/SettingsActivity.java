@@ -1,13 +1,18 @@
 package systems.byteswap.aiproute;
 
 import android.content.Context;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.util.List;
+
+//TODO: Subclasses of PreferenceActivity must override isValidFragment(String) to verify that the Fragment class is valid! systems.byteswap.aiproute.SettingsActivity has not checked if fragment systems.byteswap.aiproute.SettingsActivity$GeneralPreferenceFragment is valid.
+
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -21,6 +26,11 @@ import java.util.List;
  * API Guide</a> for more information on developing a Settings UI.
  */
 public class SettingsActivity extends PreferenceActivity {
+
+    @Override
+    protected boolean isValidFragment(String fragmentName) {
+        return fragmentName.equals("systems.byteswap.aiproute.SettingsActivity$GeneralPreferenceFragment");
+    }
 
     public static boolean isSSIDbasedActivation(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("prefCheckboxSSID", true);

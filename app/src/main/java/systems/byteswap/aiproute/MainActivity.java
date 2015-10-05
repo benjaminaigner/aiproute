@@ -24,6 +24,7 @@ import android.widget.Toast;
 //TODO: Bugfix: singleton of the main activity??? Multiple Instances possible...
 //TODO: add "about" dialog
 
+
 //TODO: publish at FDroid
 
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 //check, if the settings are SSID based activation or general
                 if(SettingsActivity.isSSIDbasedActivation(this.getApplicationContext())) {
                     //check if SSID corresponds to route, if yes activate
-                    if(store.isSSIDactiveForRoute(id,wifi.getConnectionInfo().getSSID())) {
+                    if(store.isSSIDactiveForRoute(id,wifi.getConnectionInfo().getSSID().replaceAll("\"", ""))) {
                         ShellAccess.execSuCommand(store.getRoute(id).toRouteStringAdd(this.getApplicationContext()));
                     }
                 } else {
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 //check, if the settings are SSID based activation or general
                 if(SettingsActivity.isSSIDbasedActivation(this.getApplicationContext())) {
                     //check if SSID corresponds to route, if yes activate
-                    if(store.isSSIDactiveForRoute(id,wifi.getConnectionInfo().getSSID())) {
+                    if(store.isSSIDactiveForRoute(id,wifi.getConnectionInfo().getSSID().replaceAll("\"", ""))) {
                         ShellAccess.execSuCommand(store.getRoute(id).toRouteStringAdd(this.getApplicationContext()));
                     }
                 } else {
@@ -197,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                 //check, if the settings are SSID based activation or general
                 if (SettingsActivity.isSSIDbasedActivation(parent.getContext())) {
                     //check if SSID corresponds to route, if yes activate
-                    if (store.isSSIDactiveForRoute(routeId, wifi.getConnectionInfo().getSSID())) {
+                    if (store.isSSIDactiveForRoute(routeId, wifi.getConnectionInfo().getSSID().replaceAll("\"", ""))) {
                         ShellAccess.execSuCommand(r.toRouteStringAdd(parent.getContext()));
                         Log.d("AIProute", "Route activate, command: " + r.toRouteStringAdd(parent.getContext()));
                     }

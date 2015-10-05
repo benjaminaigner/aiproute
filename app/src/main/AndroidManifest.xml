@@ -2,6 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="systems.byteswap.aiproute" >
 
+    <!-- permissions:
+     ACCESS_SUPERUSER: without su, modifications to the routing table are not possible
+     ACCESS_NETWORK_STATE: future feature, to activate automatically routes on different connections
+     ACCESS_WIFI_STATE: used to bind routes to SSIDs of the Wifi
+     RECEIVE_BOOT_COMPLETED: broadcast if the boot is completed, necessary to apply routes and the wifi receiver on boot
+     CHANGE_WIFI_STATE: according to Android doc (https://developer.android.com/reference/android/net/wifi/WifiManager.html#getConfiguredNetworks%28%29)
+     it is necessary to enable the wifi to get all configured networks, therefore this app changes the wifi state
+     (if disabled) for a short time to receive all configured SSIDs
+     .-->
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Wifi is mandatory -->
+    <uses-feature android:name="android.hardware.wifi" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,6 +46,15 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
-    </application>
 
+        <receiver android:enabled="true" android:name="systems.byteswap.aiproute.AutostartBroadcastReceiver"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".RouteService" ></service>
+    </application>
 </manifest>

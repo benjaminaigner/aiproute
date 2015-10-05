@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AIProute</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="active">Aktiv</string>
+    <string name="address">Adresse</string>
+    <string name="applyChangeRoute">Route geändert</string>
+    <string name="applyNewRoute">Neue Route hinzugefügt</string>
+    <string name="button_add">Neue Route</string>
+    <string name="button_save">Speichern</string>
+    <string name="button_ssid">Netzwerke wählen (SSIDs)</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="context_delete">Löschen</string>
+    <string name="context_edit">Editieren</string>
+    <string name="dialogSSIDTitle">Netzwerke wählen (SSIDs)</string>
+    <string name="gateway">Gateway</string>
+    <string name="inputmetricnotvalid">Metrik ist keine gültige Nummer</string>
+    <string name="inputnotvalid">Eingabe nicht gültig:</string>
+    <string name="intenterror">FEHLER: Intent</string>
+    <string name="metric">Metrik</string>
+    <string name="name">Name</string>
+    <string name="netmask">Netzmaske</string>
+    <string name="ok">OK</string>
+    <string name="persistent">Persistend (aktivieren beim Start)</string>
+    <string name="routeActivated">Route aktiviert</string>
+    <string name="routeDeactivated">Route deaktiviert</string>
+    <string name="routeListAddress">Adresse</string>
+    <string name="routeListGateway">Gateway</string>
+    <string name="routeListMetric">Metrik</string>
+    <string name="routeListName">Name</string>
+    <string name="routeListNetmask">Netzmaske</string>
+    <string name="ssids">Netzwerkname</string>
+    <string name="title_activity_edit_route">Anlegen/Bearbeiten</string>
+    <string name="pref_general_autostart_name">Autostart</string>
+    <string name="pref_general_autostart_summary">Alle aktiven Routen beim Start laden</string>
+    <string name="pref_general_interface">Wifi Gerätename</string>
+    <string name="pref_general_ssid_name">Netzwerknamen verwenden</string>
+    <string name="pref_general_ssid_summary">Aktive Routen nur laden, wenn das Netzwerk aktiv ist</string>
+    <string name="pref_header_about">Über</string>
+    <string name="pref_header_general">Allgemein</string>
+    <string name="title_activity_settings">Einstellungen</string>
+</resources>

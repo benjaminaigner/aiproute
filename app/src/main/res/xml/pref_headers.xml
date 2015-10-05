@@ -4,12 +4,7 @@
 
     <header android:fragment="systems.byteswap.aiproute.SettingsActivity$GeneralPreferenceFragment"
         android:title="@string/pref_header_general" />
-
-    <header
-        android:fragment="systems.byteswap.aiproute.SettingsActivity$NotificationPreferenceFragment"
-        android:title="@string/pref_header_notifications" />
-
-    <header android:fragment="systems.byteswap.aiproute.SettingsActivity$DataSyncPreferenceFragment"
-        android:title="@string/pref_header_data_sync" />
+    <header android:fragment="systems.byteswap.aiproute.SettingsActivity$AboutFragment"
+        android:title="@string/pref_header_about" />
 
 </preference-headers>

@@ -3,9 +3,24 @@
     <string name="app_name">AIProute</string>
     <string name="button_add">Add new route</string>
     <string name="action_settings">Settings</string>
+    <string name="routeActivated">Route activated</string>
+    <string name="routeDeactivated">Route deactivated</string>
 
+    <!-- route list -->
+    <string name="routeListName">Name</string>
+    <string name="routeListAddress">Address</string>
+    <string name="routeListGateway">Gateway</string>
+    <string name="routeListMetric">Metric</string>
+    <string name="routeListNetmask">Netmask</string>
 
     <!-- settings activity -->
+    <string name="pref_header_about">About</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_general_autostart_name">Autostart</string>
+    <string name="pref_general_autostart_summary">Load all active routes on boot</string>
+    <string name="pref_general_ssid_name">Use SSID</string>
+    <string name="pref_general_ssid_summary">Load active routes, only if the current Wifi is selected</string>
+    <string name="pref_general_interface">Wifi device name</string>
 
     <!-- new/edit route -->
     <string name="address">Address</string>
@@ -13,9 +28,24 @@
     <string name="gateway">Gateway</string>
     <string name="netmask">Netmask</string>
     <string name="metric">Metric</string>
+    <string name="ssids">Network name</string>
     <string name="persistent">Persistent (apply on reboot)</string>
     <string name="active">Active</string>
     <string name="button_save">Save</string>
+    <string name="button_ssid">Select networks (SSID)</string>
+    <string name="dialogSSIDTitle">Select networks (SSID)</string>
     <string name="title_activity_edit_route">Create / Edit activity</string>
+    <string name="inputnotvalid">Input not valid: </string>
+    <string name="inputmetricnotvalid">Uups, metric is not a valid number</string>
+    <string name="applyNewRoute">New route added</string>
+    <string name="applyChangeRoute">Route changed</string>
+    <string name="intenterror">Error: Intent passing problem...</string>
 
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- context menu -->
+    <string name="context_edit">Edit</string>
+    <string name="context_delete">Delete</string>
+    <string name="pref_header_general">General</string>
 </resources>

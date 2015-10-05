@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textEditAddress"
+        android:inputType="phone"
         android:hint="@string/address" />
 
     <TextView
@@ -49,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textEditNetmask"
+        android:inputType="phone"
         android:hint="@string/netmask" />
 
     <TextView
@@ -63,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textEditGateway"
+        android:inputType="phone"
         android:hint="@string/gateway" />
 
     <TextView
@@ -77,8 +80,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textEditMetric"
+        android:inputType="phone"
         android:hint="@string/metric" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ssids"
+        android:id="@+id/textViewIface"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectSSID"
+        android:text="@string/button_ssid"
+        android:id="@+id/buttonSSID"
+        android:layout_gravity="center_horizontal" />
+
+    <!--<EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEditIface"
+        android:hint="@string/ssids" />
+    -->
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +118,7 @@
         android:id="@+id/checkBoxActive" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="saveRoute"
         android:text="@string/button_save"

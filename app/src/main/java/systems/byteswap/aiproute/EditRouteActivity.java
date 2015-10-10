@@ -121,16 +121,9 @@ public class EditRouteActivity extends AppCompatActivity implements SelectSSIDDi
         //load Wifi service
         wifi = (WifiManager)this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-        //enable Wifi (SSIDs won't show if disabled...)
-        boolean wasEnabled = wifi.isWifiEnabled();
-        wifi.setWifiEnabled(true);
-
         //load all available system SSIDs to drop down menu...
-
         List<WifiConfiguration> wifiList = wifi.getConfiguredNetworks();
 
-        //deactivate Wifi, if it was deactivated before
-        wifi.setWifiEnabled(wasEnabled);
 
 
         //Assemble the Wifi list in the Array. First: current active Wifi, all connections and
@@ -144,12 +137,13 @@ public class EditRouteActivity extends AppCompatActivity implements SelectSSIDDi
                 activeArrayWorking.add(false);
             }
         }
-
-        for (WifiConfiguration item : wifiList) {
-            if (!ssidArray.contains(item.SSID.replaceAll("\"", ""))) {
-                ssidArray.add(item.SSID.replaceAll("\"", ""));
-                activeArray.add(false);
-                activeArrayWorking.add(false);
+        if(wifiList.size()>0) {
+            for (WifiConfiguration item : wifiList) {
+                if (!ssidArray.contains(item.SSID.replaceAll("\"", ""))) {
+                    ssidArray.add(item.SSID.replaceAll("\"", ""));
+                    activeArray.add(false);
+                    activeArrayWorking.add(false);
+                }
             }
         }
     }

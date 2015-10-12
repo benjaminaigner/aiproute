@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by beni on 08/09/15.
- *
  * This file provides storage access to insert/delete/update any route associated
  * data.
  * There are 2 tables:
@@ -20,6 +18,22 @@ import android.database.sqlite.SQLiteOpenHelper;
  * AIPRoute_SSIDs
  * In order to provide the possibility to attach one route to a specific SSID, the second table is
  * used. There is a 1 to n relation between routes and ssids
+ *
+
+ Copyright (C) 2015  Benjamin Aigner
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class StorageProvider extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "AIPRoute";

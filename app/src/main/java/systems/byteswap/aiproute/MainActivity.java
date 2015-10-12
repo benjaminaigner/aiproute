@@ -21,6 +21,26 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+/**
+ * Main activity, which is used to show all active/available routes
+ * It is also possible to modify a route or change settings
+
+ Copyright (C) 2015  Benjamin Aigner
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 //TODO: Bugfix: singleton of the main activity??? Multiple Instances possible...
 //TODO: add "about" dialog
 

@@ -150,12 +150,17 @@ public class EditRouteActivity extends AppCompatActivity implements SelectSSIDDi
         //Assemble the Wifi list in the Array. First: current active Wifi, all connections and
         //all saved SSIDs
         WifiInfo info = wifi.getConnectionInfo();
-        String currentSSID = info.getSSID().replaceAll("\"", "");
-        if(!currentSSID.isEmpty()) {
-            if(!ssidArray.contains(currentSSID)) {
-                ssidArray.add(currentSSID);
-                activeArray.add(false);
-                activeArrayWorking.add(false);
+
+        if(info != null) {
+            if (info.getSSID() != null) {
+                if(!info.getSSID().isEmpty()) {
+                    String currentSSID = info.getSSID().replaceAll("\"", "");
+                    if (!ssidArray.contains(currentSSID)) {
+                        ssidArray.add(currentSSID);
+                        activeArray.add(false);
+                        activeArrayWorking.add(false);
+                    }
+                }
             }
         }
         if(wifiList.size()>0) {

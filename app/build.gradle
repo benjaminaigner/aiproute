@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.0"
     defaultConfig {
         applicationId "systems.byteswap.aiproute"
-        minSdkVersion 14
-        targetSdkVersion 15
+        minSdkVersion 19
+        targetSdkVersion 19
         versionCode 1
         versionName '0.1'
     }

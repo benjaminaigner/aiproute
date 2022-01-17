@@ -1,9 +1,13 @@
 # AIProute
 
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-
 Welcome to the Android IP route app!
 
+## Remarks
+
+* No maintenance intended!
+* Rooting your Android is required!
+
+## Introduction
 
 This app allows you a modification of the IP routing table for your Android device.
 
